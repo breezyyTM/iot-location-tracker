@@ -11,7 +11,7 @@
 
 
 // ThingSpeak API key (Write)
-String apiKey = "076UYRFTB5AZ9MMA"; // ******************************************************************
+String apiKey = "<<WRITE_API_KEY_HERE>>"; // ********************** CHANGE THIS **************************
 
 
 // Create TinyGPS++ object
@@ -108,7 +108,7 @@ char DATAZ1 = 0x37; //Z-Axis Data 1
    Serial.println();
    sendData("AT+RST\r\n",2000,DEBUG);
    sendData("AT+CWMODE=1\r\n",2000,DEBUG);
-   sendData("AT+CWJAP=\"SSID_here\",\"Password_here\"\r\n",4000,DEBUG);  
+   sendData("AT+CWJAP=\"<<SSID_HERE>>\",\"<<PASSWORD_HERE>>\"\r\n",4000,DEBUG);  
     // ****************************************************************** Change these!
    sendData("AT+CIPMUX=0\r\n",2000,DEBUG);
    Serial.println("hi");
@@ -258,7 +258,7 @@ char DATAZ1 = 0x37; //Z-Axis Data 1
 //   Serial.println();
 //   sendData("AT+RST\r\n",2000,DEBUG);
 //   sendData("AT+CWMODE=1\r\n",2000,DEBUG);
-//   sendData("AT+CWJAP=\"HAHAHNICETRY\",\"ALMOSTFORGOTABOUTTHIS\"\r\n",4000,DEBUG);  
+//   sendData("AT+CWJAP=\"<<SSID_HERE>>\",\"<<PASSWORD_HERE>>\"\r\n",4000,DEBUG);  
 //   // **********************   Change these!   ************************
 //   sendData("AT+CIPMUX=0\r\n",2000,DEBUG);
 //   Serial.println("hi");
@@ -535,28 +535,3 @@ String sendData(String command, const int timeout, boolean debug)
     Serial.println();
     return latVal;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
- 
